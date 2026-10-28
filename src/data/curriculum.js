@@ -1,0 +1,97 @@
+// Curriculum, mentors and practice-platform data (ported from the single-file tracker)
+export const EPS=[
+{n:'Fundamentals',s:'Web, HTML, CSS, JavaScript, TypeScript',h:215,c:['How the Internet Works','Client-Server Architecture','Internet Protocols: TCP & UDP','HTTP & HTTPS','Preparing Your Machine','Semantic HTML & Browser Rendering','CSS Core Fundamentals','Working With SASS','CSS Layout Mastery','CSS Responsive Design','CSS Architecture & Project Structure','CSS Frameworks: Tailwind & Bootstrap','CSS Animations & Motion Design','Introduction to JavaScript','DOM Manipulation','Event Handling','Browser Functionalities','Asynchronous JavaScript','Operators & Type System','Conditionals & Loops','Functions','Arrays','Array Methods','Objects','Object Methods','TypeScript Essentials','Throttling, Debouncing & JSON']},
+{n:'React & Next.js',s:'Frontend architecture',h:262,c:['Introduction to React','Components & Props','State & Re-rendering Logic','React Lifecycle Methods','Event Handling & Conditional Rendering','Component Architecture Principles','Useful Hooks','useEffect Deep Dive','Custom Hooks & Reusable Logic','Advanced Reusability Patterns','Routing & Application Structure','Server State & API Integration','Global State Management','State Management Using Redux','Advanced Forms & Validation','Performance Optimization in React','Understanding Full Stack Frameworks','Getting Started with Next.js','Rendering Strategies in Next.js','Building APIs with Next.js','Working with Server Actions']},
+{n:'Node.js & MongoDB',s:'Backend architecture',h:150,c:['Starting with Node.js','Creating a Server','Backend Architectures: MVC & SOA','Express.js','Template Engine: EJS','Middleware in Express.js','Handling Files with Express','Database Basics & MongoDB','REST API Development','Input Validation','Database Optimization','Logging & Monitoring','Production Project Structure','Authentication & Authorization','WebSockets & Socket.io','Caching: Local & Redis','Error Handling in Express','Testing Tools']},
+{n:'Generative AI',s:'LLMs, RAG, agents',h:330,c:['How LLMs Actually Work','Calling LLM APIs Properly','Prompt Engineering Fundamentals','Structured Output in AI Systems','Generating JSON from LLMs','Schema Validation with Zod','Function / Tool Calling','Streaming Responses','Streaming with Structured Data','Error Handling in AI Applications','Understanding Embeddings','Integrating Vector Databases','Building a RAG Pipeline','Evaluating AI Systems','Understanding AI Agents','Agent Design Patterns','LangChain (Practical)','Building a Multi-Agent Workflow','Multi-Agent Architecture Concerns']},
+{n:'DevOps & Deployment',s:'Docker, AWS, CI/CD',h:24,c:['DevOps Foundations','Docker & Containerization','Cloud Deployments','AWS EC2','Security Groups','Load Balancers','AWS CloudFront','CI / CD Automation','Scalability & Reliability']},
+{n:'Microservices & Web3',s:'Scaling and reliability',h:190,c:['Microservice Foundations','Building & Orchestrating Microservices','AWS Cloud-Native Deployment','Distributed Observability & Scaling','Scaling Concepts','Caching in Production','Logging & Observability','Production Hardening','Final Production Deployment','Web3 Basics']},
+{n:'DSA with JavaScript',s:'Data structures and algorithms',h:44,c:['Conditional Statements','Loops, Nested Loops & Patterns','Array','OOP in JavaScript','Strings','Time & Space Complexity','Math Problems & Algorithms','Advanced Problems on Array','Sorting Algorithms','Binary Search & Variations','Hashing: Set & Map','Linked List','Queue','Stack','Recursion & Backtracking','Tree','Binary Search Tree']},
+{n:'Aptitude & Reasoning',s:'Quant, logical, verbal',h:100,c:['## Classic Chapters','Percentage','Profit and Loss','Simple Interest','Compound Interest','Ratio and Proportion','## Number Related','Number System','HCF and LCM','Average','## Speed, Work & Time','Work and Time','Pipes and Cisterns','Speed, Distance & Time','Problems on Trains','Boats and Streams','## Probability & Combinations','Permutations & Combinations','Probability','## Progressions','Arithmetic Progression','Geometric Progression','## Miscellaneous','Calendar','Clocks','## Logical Reasoning','Direction Sense','Blood Relation','Syllogism','Arrangements','Series','## Verbal Reasoning','Sentence Ordering','Error Identification','Sentence Improvement']},
+{n:'System Design',s:'LLD and HLD',h:300,c:['## Low Level Design','LLD Foundations','Design Principles (SOLID, DRY)','Creational Design Patterns','Structural Design Patterns','Behavioral Design Patterns','LLD Machine Coding Problems','## High Level Design','System Design Foundations','Communication & Data Layer','Core Infrastructure','Advanced Distributed Systems','12 Real-World Design Problems']}
+];
+export const C=[],EPC=[];
+EPS.forEach((e,ei)=>{let g='',k=0;EPC[ei]=[];e.c.forEach(t=>{if(t.startsWith('## ')){g=t.slice(3);return}const o={id:'e'+(ei+1)+'c'+(++k),ep:ei,t,g};C.push(o);EPC[ei].push(o)})});
+export const CM={};C.forEach(c=>CM[c.id]=c);
+/* Hindi video discovery: YouTube search links stay valid, and you can pin exact videos per chapter */
+export const EXTRA=[
+{q:'web development',ch:['Chai aur Code','Sheriyans Coding School','Code Step By Step','CodeWithHarry','Thapa Technical','Namaste JavaScript','Apna College','Gate Smashers','freeCodeCamp','Traversy Media','Fireship']},
+{q:'React',ch:['Chai aur Code','Sheriyans Coding School','Code Step By Step','Namaste React','Thapa Technical','CodeWithHarry','Piyush Garg','freeCodeCamp','Theo t3.gg','Fireship']},
+{q:'Node.js backend',ch:['Chai aur Code','Sheriyans Coding School','Code Step By Step','Piyush Garg','Thapa Technical','CodeWithHarry','freeCodeCamp','Hussein Nasser','Traversy Media']},
+{q:'Generative AI',ch:['Chai aur Code','Piyush Garg','CampusX','Krish Naik Hindi','freeCodeCamp','Andrej Karpathy','LangChain','Fireship']},
+{q:'DevOps',ch:['Piyush Garg','TrainWithShubham','Chai aur Code','TechWorld with Nana','Kunal Kushwaha','freeCodeCamp']},
+{q:'microservices AWS',ch:['Piyush Garg','TrainWithShubham','Chai aur Code','Hussein Nasser','TechWorld with Nana','freeCodeCamp']},
+{q:'DSA JavaScript',ch:['Apna College','CodeHelp','Pepcoding','Anuj Bhaiya','Coder Army','take U forward','NeetCode']},
+{q:'aptitude',ch:['Abhinay Maths','Rakesh Yadav','Wifistudy']},
+{q:'system design',ch:['Piyush Garg','Concept && Coding','Coder Army','ByteByteGo','Gaurav Sen','Hussein Nasser']}];
+export const CH={
+'Chai aur Code':['Hindi','Hitesh Choudhary. Long, project-based series on JavaScript, React, backend, Docker and GenAI.'],
+'Sheriyans Coding School':['Hindi','Practical frontend and full-stack courses with a strong design and animation focus.'],
+'Code Step By Step':['Hindi','Anil Sidhu. Step-by-step React, Node and MERN with many small projects.'],
+'CodeWithHarry':['Hindi','Harry. Beginner-friendly full courses across web and programming.'],
+'Thapa Technical':['Hindi','Long, structured JavaScript, React and MERN courses.'],
+'Namaste JavaScript':['Hinglish','Akshay Saini. Deep dives into how JavaScript works under the hood.'],
+'Namaste React':['Hinglish','Akshay Saini. React taught with a production mindset.'],
+'Apna College':['Hindi','Shradha Khapra. DSA and web development roadmaps.'],
+'Gate Smashers':['Hindi','Clear computer networks and CS fundamentals.'],
+'Piyush Garg':['Hinglish','Backend, Docker, AWS and system design with a production focus.'],
+'TrainWithShubham':['Hindi','Shubham Londhe. DevOps and cloud tutorials.'],
+'CampusX':['Hindi','Machine learning and deep learning explained from first principles.'],
+'Krish Naik Hindi':['Hindi','Data science, ML and generative AI.'],
+'CodeHelp':['Hindi','Love Babbar. DSA courses and interview prep.'],
+'Pepcoding':['Hinglish','Well-structured DSA with an interview focus.'],
+'Anuj Bhaiya':['Hindi','Roadmaps and DSA for placements.'],
+'Coder Army':['Hindi','Rohit Negi. DSA and development playlists.'],
+'Abhinay Maths':['Hindi','Quantitative aptitude and maths tricks.'],
+'Rakesh Yadav':['Hindi','Quant and reasoning for competitive exams.'],
+'Wifistudy':['Hindi','Exam-oriented reasoning and quant lessons.'],
+'Concept && Coding':['Hinglish','Shrayansh Jain. Low level design and machine coding.'],
+'freeCodeCamp':['English','Free full-length courses, regularly updated.'],
+'Traversy Media':['English','Crash courses and project builds in modern web tech.'],
+'Fireship':['English','Fast, current overviews of new tools and frameworks.'],
+'Theo t3.gg':['English','Opinionated, current React and Next.js ecosystem coverage.'],
+'Hussein Nasser':['English','Backend engineering, databases and networking in depth.'],
+'Andrej Karpathy':['English','Build and understand LLMs from scratch.'],
+'LangChain':['English','Official tutorials for LangChain and agents.'],
+'TechWorld with Nana':['English','DevOps, Docker and Kubernetes explained clearly.'],
+'Kunal Kushwaha':['English','DevOps, cloud and open source tutorials.'],
+'take U forward':['Hinglish','Striver. Structured DSA sheets and interview prep.'],
+'NeetCode':['English','Interview-focused DSA explanations.'],
+'ByteByteGo':['English','Visual system design explanations.'],
+'Gaurav Sen':['English','System design concepts and interview walk-throughs.']};
+
+export const PLAT=[
+{id:'lc',n:'LeetCode',u:'https://leetcode.com/problemset/',cat:'DSA',eps:[6],d:'The main interview problem bank. Filter by topic, difficulty and company.'},
+{id:'nc',n:'NeetCode',u:'https://neetcode.io/',cat:'DSA',eps:[6],d:'Curated problem roadmap with video explanations.'},
+{id:'gfg',n:'GeeksforGeeks',u:'https://www.geeksforgeeks.org/explore',cat:'DSA',eps:[6],d:'Topic-wise practice with theory articles and company tags.'},
+{id:'hr',n:'HackerRank',u:'https://www.hackerrank.com/',cat:'DSA',eps:[0,6],d:'Language tracks, 10 Days of JavaScript, SQL and skill certificates.'},
+{id:'cc',n:'CodeChef',u:'https://www.codechef.com/practice',cat:'DSA',eps:[6],d:'Practice problems by difficulty, plus regular contests.'},
+{id:'cf',n:'Codeforces',u:'https://codeforces.com/problemset',cat:'DSA',eps:[6],d:'Competitive problems with ratings. Good for building speed.'},
+{id:'ib',n:'InterviewBit',u:'https://www.interviewbit.com/',cat:'DSA',eps:[6],d:'Guided interview preparation path with topic problems.'},
+{id:'c360',n:'Code360 (Coding Ninjas)',u:'https://www.naukri.com/code360',cat:'DSA',eps:[6],d:'Problem lists, guided paths and interview experiences.'},
+{id:'cw',n:'Codewars',u:'https://www.codewars.com/',cat:'Language',eps:[0],d:'Small JavaScript katas ranked by difficulty.'},
+{id:'ex',n:'Exercism (JavaScript)',u:'https://exercism.org/tracks/javascript',cat:'Language',eps:[0],d:'Exercises with free mentoring feedback. A TypeScript track also exists.'},
+{id:'ji',n:'javascript.info',u:'https://javascript.info/',cat:'Language',eps:[0,1],d:'Modern JavaScript tutorial with tasks after each topic.'},
+{id:'fm',n:'Frontend Mentor',u:'https://www.frontendmentor.io/challenges',cat:'Frontend',eps:[0,1],d:'Real design files to build and compare. Great for portfolio projects.'},
+{id:'gf',n:'GreatFrontEnd',u:'https://www.greatfrontend.com/',cat:'Frontend',eps:[0,1],d:'Frontend interview questions: JavaScript, UI components and system design.'},
+{id:'cb',n:'CSSBattle',u:'https://cssbattle.dev/',cat:'Frontend',eps:[0],d:'Recreate target images with the smallest CSS.'},
+{id:'js30',n:'JavaScript30',u:'https://javascript30.com/',cat:'Frontend',eps:[0],d:'30 vanilla JavaScript projects with no frameworks.'},
+{id:'fcc',n:'freeCodeCamp',u:'https://www.freecodecamp.org/learn',cat:'Frontend',eps:[0,1,2],d:'Interactive lessons and certification projects, all free.'},
+{id:'rm',n:'roadmap.sh projects',u:'https://roadmap.sh/projects',cat:'Projects',eps:[1,2,4],d:'Project ideas by level for frontend, backend and DevOps.'},
+{id:'mdb',n:'MongoDB University',u:'https://learn.mongodb.com/',cat:'Backend',eps:[2],d:'Free official MongoDB courses and skill badges.'},
+{id:'sqlb',n:'SQLBolt',u:'https://sqlbolt.com/',cat:'Backend',eps:[2],d:'Short interactive SQL lessons.'},
+{id:'kc',n:'Killercoda',u:'https://killercoda.com/',cat:'DevOps',eps:[4,5],d:'Browser-based Linux, Docker and Kubernetes scenarios.'},
+{id:'kk',n:'KodeKloud',u:'https://kodekloud.com/',cat:'DevOps',eps:[4,5],d:'Hands-on DevOps labs. Much of it is paid.'},
+{id:'pwd',n:'Play with Docker',u:'https://labs.play-with-docker.com/',cat:'DevOps',eps:[4],d:'A free Docker playground in the browser.'},
+{id:'kg',n:'Kaggle Learn',u:'https://www.kaggle.com/learn',cat:'AI',eps:[3],d:'Short practical courses and notebooks.'},
+{id:'hf',n:'Hugging Face Learn',u:'https://huggingface.co/learn',cat:'AI',eps:[3],d:'Courses on LLMs, agents and transformers.'},
+{id:'lca',n:'LangChain Academy',u:'https://academy.langchain.com/',cat:'AI',eps:[3],d:'Official courses on LangChain and agent workflows.'},
+{id:'ibx',n:'IndiaBIX',u:'https://www.indiabix.com/aptitude/questions-and-answers/',cat:'Aptitude',eps:[7],d:'Topic-wise aptitude questions with answers and explanations.'},
+{id:'pi',n:'PrepInsta',u:'https://prepinsta.com/',cat:'Aptitude',eps:[7],d:'Placement aptitude, reasoning and verbal practice.'},
+{id:'sdp',n:'System Design Primer',u:'https://github.com/donnemartin/system-design-primer',cat:'System design',eps:[8],d:'Free open-source guide with diagrams and practice questions.'},
+{id:'dg',n:'DesignGurus',u:'https://www.designgurus.io/',cat:'System design',eps:[5,8],d:'System design and coding interview courses.'},
+{id:'bbg',n:'ByteByteGo',u:'https://bytebytego.com/',cat:'System design',eps:[8],d:'Visual guides to system design concepts.'},
+{id:'rg',n:'Refactoring Guru',u:'https://refactoring.guru/design-patterns',cat:'System design',eps:[8],d:'Design patterns explained with examples. Useful for low level design.'}];
+export const PL={};PLAT.forEach(p=>PL[p.id]=p);
+export const PCATS=['All','DSA','Language','Frontend','Projects','Backend','DevOps','AI','Aptitude','System design'];
+export const TAGS={'Array':['array'],'Advanced Problems on Array':['two-pointers','prefix-sum'],'Strings':['string'],'Math Problems & Algorithms':['math'],'Sorting Algorithms':['sorting'],'Binary Search & Variations':['binary-search'],'Hashing: Set & Map':['hash-table'],'Linked List':['linked-list'],'Queue':['queue'],'Stack':['stack'],'Recursion & Backtracking':['backtracking','recursion'],'Tree':['binary-tree'],'Binary Search Tree':['binary-search-tree']};
