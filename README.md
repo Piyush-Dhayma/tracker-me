@@ -1,4 +1,4 @@
-# Cohort 3.0 Tracker (React)
+# Career Point Tracker
 
 A learning tracker for the Job Ready AI Powered Cohort 3.0 syllabus: 9 episodes, 159 chapters, spaced revision,
 daily routine alarms, focus timer, mentors (Hindi/Hinglish/English YouTube), LeetCode-style practice log, XP and badges.
